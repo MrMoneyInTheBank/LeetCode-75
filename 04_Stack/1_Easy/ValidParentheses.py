@@ -19,7 +19,7 @@ def isValid(s):
     stack = [] 
 
     for char in s:
-        if char not in closeOpen:
+        if char in closeOpen:
             if stack and stack[-1] == closeOpen[char]:
                 stack.pop()
             else:
@@ -29,7 +29,7 @@ def isValid(s):
         
     return len(stack) == 0
 
-
+print(isValid("(){}[]"))
 # The inner most valid parentheses will be closed off by its counterpart
 # immediately. We can use this behaviour to build a stack. If the stack is
 # empty and we come across a closing parentheses, then we know that this is 
