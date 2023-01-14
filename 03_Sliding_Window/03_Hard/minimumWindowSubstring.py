@@ -1,3 +1,11 @@
+'''
+Given two strings s and t of lengths m and n respectively, return the minimum window 
+substring of s such that every character in t (including duplicates) is included in the window. 
+If there is no such substring, return the empty string "".
+
+The testcases will be generated such that the answer is unique.
+'''
+
 from collections import defaultdict
 
 
@@ -32,3 +40,10 @@ def minWindow(s, t):
                 res = s[l-1:r+1]
 
     return res
+
+# First, store a frequency count of all the characters in t. This will be used in the helper 
+# function which checks if one dictionary is a subset of another. Next, create a window. Increase
+# the right index until the window is valid, at which point, increase the left window until the window 
+# is no longer valid. This will allow us to get all valid windows. Keep the shorted valid window. 
+
+# Time | Space : O(n) | O(n)
