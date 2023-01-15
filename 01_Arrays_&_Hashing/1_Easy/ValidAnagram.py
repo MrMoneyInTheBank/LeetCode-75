@@ -16,3 +16,20 @@ def isAnagram(s, t):
 # Time Complexity: O(n log(n))
 # Space Complexity: O(n) since we are not sorting the strings 
 #                   and storing a list of the sorted letters
+
+
+# Another approach which takes linear time is 
+
+from collections import defaultdict
+def isAnagramLinear(s, t):
+    sCount = defaultdict(int)
+    tCount = defaultdict(int)
+
+    if len(s) != len(t):
+        return False 
+
+    for i in range(len(s)):
+        sCount[s[i]] += 1 
+        tCount[t[i]] += 1 
+    
+    return tCount == sCount 
