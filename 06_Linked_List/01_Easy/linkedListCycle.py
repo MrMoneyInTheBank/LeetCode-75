@@ -48,4 +48,8 @@ def hasCycleConstantSpace(head):
 # If there is a cycle in the list then the fast pointer will never reach the end of the list and 
 # eventually the slow pointer will catch up to it. 
 
+# Lets say two runners are participating in a race. fast runner runs at twice the speed of the slow runner
+# If the slow runner ever catches up with the fast runner, this means that the race does not end since the fast
+# runner has looped back to a spot where they had traveled from 
+
 # Time | Space : O(n) | O(1)/O(n) 
