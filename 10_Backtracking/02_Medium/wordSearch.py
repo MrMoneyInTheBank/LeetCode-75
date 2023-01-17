@@ -1,4 +1,8 @@
-
+'''
+Given a grid of letters and a word, return True if the word exists 
+in the grid. A word can be formed by joining a cell to its horizontal 
+vertical neighbours uniquely.
+'''
 
 def exists(grid, word):
     R = len(grid)
