@@ -66,6 +66,7 @@ def findWords(board, words):
         dfs(r - 1, c, node, currWord)
         dfs(r, c + 1, node, currWord)
         dfs(r, c - 1, node, currWord)
+        seen.remove((r, c))
 
     for r in range(R):
         for c in range(C):
