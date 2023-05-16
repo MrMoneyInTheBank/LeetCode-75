@@ -26,3 +26,20 @@ def groupAnagrams(strs):
 
 # Time complexity: O(n^2 log(n))
 # Space complexity: O(n)
+
+
+# Another approach 
+
+def main(strs):
+    res = defaultdict(list)
+
+    for s in strs:
+        count = [0] * 26
+        for c in s:
+            count[ord(c) - ord('a')] += 1
+
+        res[tuple(count)].append(s)
+    
+    return res.values()
+
+# T|S = O(n^2) | O(n)
