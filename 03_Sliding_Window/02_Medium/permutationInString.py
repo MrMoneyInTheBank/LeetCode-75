@@ -30,7 +30,11 @@ class Solution:
             r += 1 
         
         return False 
-    
+
+# Time | Space : O(n^2) | O(n)
+
+# Check is windows contains same frequencies of letters 
+
 
 # class Solution:
 #     def checkInclusion(self, s1: str, s2: str) -> bool:
