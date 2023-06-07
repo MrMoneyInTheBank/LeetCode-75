@@ -3,7 +3,7 @@ Given the roots of two binary trees root and subroot, return
 true if there is a subroot of root with the same structure and 
 node values of subroot and false otherwise
 
-A subtree of a binary tree tree is a tre that consists of a node 
+A subtree of a binary tree tree is a tree that consists of a node 
 in tree and all of this node's descendants. The tree could also be 
 considered as a subtree of itself
 '''

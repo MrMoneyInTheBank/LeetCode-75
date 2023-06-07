@@ -13,9 +13,7 @@ def invertTree(root):
     if not root:
         return None 
     
-    l = root.left 
-    root.left = root.right 
-    root.right = l 
+    root.left, root.right = root.right, root.left
 
     invertTree(root.left)
     invertTree(root.right)
