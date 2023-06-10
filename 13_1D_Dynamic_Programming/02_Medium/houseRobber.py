@@ -24,5 +24,13 @@ def rob(nums):
 # robbed until (and including) the current house. At each iteration in the loop, we calculate the maximum we can 
 # loot from the current house, can then since moving forward, the current house will become the previous house for
 # the next house, we update r1 and set it to r2, and we set r2 to the value we just calculated. 
+
+# For each house, the maximum we can collect till that house (inclusive) is either robbing the current 
+# house, leaving the previous house, and adding the maximum until n-2 houses or we can not rob the current
+# house and take the money from robbing until the n-1 (inclusive) house. Let rob2 be the amount we can rob 
+# if we choose to rob the current house. Let rob1 be the amount we can rob if we don't choose to rob the current
+# house. For each house, rob1 will be the rob2 of the previous house and rob1 will be the max of robbing
+# the current house and letting it go. At the end, we return rob2 since that indicates the maximum we can 
+# collect by robbing until the end. 
  
 # Time | Space: O(n) | O(1) 
