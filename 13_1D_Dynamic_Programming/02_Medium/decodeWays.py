@@ -51,7 +51,7 @@ def decodeWaysRecursive(s):
     def dfs(i):
         if i in dp:
             return dp[i]
-        if s[i] == 0:
+        if s[i] == '0':
             return 0
     
         res = dfs[i+1]
