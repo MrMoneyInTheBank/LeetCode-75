@@ -1,5 +1,6 @@
 import os 
 import sys 
+import subprocess
 
 def main():
     if len(sys.argv) < 2:
@@ -12,7 +13,9 @@ def main():
     # Gather the paths for each topic
     topics = [d for d in os.listdir(blind75_path) if os.path.isdir(os.path.join(blind75_path, d))]
 
+
     # Navigate through folder structure
+    new_language_added = False
     for topic in topics:
         topic_path = os.path.join(blind75_path, topic)
         difficulties = [d for d in os.listdir(topic_path) if os.path.isdir(os.path.join(topic_path, d))]
@@ -21,6 +24,12 @@ def main():
             language_folder_path = os.path.join(blind75_path, topic, difficulty, language)
             if not os.path.exists(language_folder_path):
                 os.makedirs(language_folder_path)
+                new_language_added = True
+    
+    # Create a new branch
+    if new_language_added:
+        subprocess.run(["git", "checkout", "-b", language])
+    
 
 if __name__ == "__main__":
     main()
