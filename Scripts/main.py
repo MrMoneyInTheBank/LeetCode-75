@@ -1,5 +1,6 @@
 import os 
 import shutil
+import numpy as numpy
 
 def main():
     blind75_path = "/Users/anshumansingh/Desktop/LeetCode/Blind75"
