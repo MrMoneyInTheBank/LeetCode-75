@@ -8,20 +8,22 @@ solution, and you may not use the same element twice.
 
 You can return the answer in any order.
 '''
+
 from collections import defaultdict
+from typing import List
 
-def twoSum(nums, target):
-    seen = defaultdict(int)
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        seen = defaultdict(int)
 
-    for i, num in enumerate(nums):
-        comp = target - num
-        
-        if comp in seen:
-            return [i, seen[comp]]
-        
-        seen[num] = i 
-    
-    return None 
+        for idx, num in enumerate(nums):
+            comp = target - num
+            if comp in seen:
+                return [idx, seen[comp]]
+
+            seen[num] = idx
+
+        return []
 
 # Traverse through the array while storing the numbers already 
 # seen in a diciontary mapping them to their indices. For each 
