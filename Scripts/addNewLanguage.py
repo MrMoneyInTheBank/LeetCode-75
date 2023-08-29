@@ -8,7 +8,7 @@ def main():
         return 
     
     language = sys.argv[1]
-    blind75_path = "/Users/anshumansingh/Desktop/LeetCode/Blind75"
+    blind75_path = "/Users/anshumansingh/Desktop/Programming/LeetCode/Blind75"
     
     # Gather the paths for each topic
     topics = [d for d in os.listdir(blind75_path) if os.path.isdir(os.path.join(blind75_path, d))]
