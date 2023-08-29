@@ -29,7 +29,11 @@ def main():
     # Create a new branch
     if new_language_added:
         subprocess.run(["git", "checkout", "-b", language])
-    
+        subprocess.run(["git", "add", "."])
+        
+        commit_message = f"{language} branch created"
+        subprocess.run(["git", "commit", "-m", commit_message])
+        subprocess.run(["git", "push", "--set-upstream", "origin", language])
 
 if __name__ == "__main__":
     main()
